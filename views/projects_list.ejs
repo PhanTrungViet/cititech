@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<br>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>
+							id
+						</th>
+						<th>
+							Project
+						</th>
+						<th>
+							<a href="/projects/add" class="btn btn-outline-success btn-sm">
+								Create
+							</a>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+
+				<% danhsach.rows.forEach(function(pj){ %>
+					<tr class="">
+						<td>
+							<%= pj.id %>
+						</td>
+						<td>
+							<span><%= pj.name %></span>
+						</td>
+						<td>
+							<a href="/projects/read/<%= pj.id %>" class="btn btn-link btn-sm">Members</a>
+							<a href="/projects/edit/<%= pj.id %>" class="btn btn-sm btn-outline-primary">
+								Update
+							</a> 
+							<a onclick="return confirm('Are you sure')" href="/projects/delete/<%= pj.id %>" class="btn btn-outline-danger btn-sm">
+								Delete
+							</a>
+						</td>
+					</tr>
+
+				<% }); %>
+
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>

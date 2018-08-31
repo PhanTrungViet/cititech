@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<br>
+			<form role="form" action="/members/edit" method="POST" enctype="application/x-www-form-urlencoded">
+				<div class="form-group">
+					<label for="inputNameMember">
+						ID
+					</label>
+					<input type="text" class="form-control" id="inputNameMember" name="id" readonly="readonly" value="<%=danhsach.id%>">
+				</div>
+				<div class="form-group">
+					<label for="inputNameMember">
+						Name
+					</label>
+					<input type="text" class="form-control" id="inputNameMember" name="name" value="<%=danhsach.name%>">
+				</div>
+				<div class="form-group">
+					<label for="inputPhone">
+						Phone
+					</label>
+					<input type="text" class="form-control" id="inputPhone" name="phone" value="<%=danhsach.phone%>">
+				</div>
+				<button type="submit" class="btn btn-primary" name="edit">
+					Submit
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>

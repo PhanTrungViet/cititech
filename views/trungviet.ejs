@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<br>
+			<button type="button" class="btn btn-outline-success btn-sm">
+				Create
+			</button> 
+			<button type="button" class="btn btn-sm btn-outline-primary">
+				Update
+			</button> 
+			<button type="button" class="btn btn-outline-danger btn-sm">
+				Delete
+			</button>
+			<br>
+			<br>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>
+							id
+						</th>
+						<th>
+							Project
+						</th>
+						<th>
+							<button href="/" type="button" class="btn btn-outline-success btn-sm">
+								Create
+							</button>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="table-success">
+						<td>
+							0
+						</td>
+						<td>
+							<a href="/" class="btn btn-link btn-sm">sample</a>
+						</td>
+						<td>
+							<button type="button" class="btn btn-sm btn-outline-primary">
+								Update
+							</button> 
+							<button type="button" class="btn btn-outline-danger btn-sm">
+								Delete
+							</button>
+						</td>
+					</tr>
+				<% for(var i = 1; i <= danhsach; i++ ){ %>
+					<tr class="table-success">
+						<td>
+							<%= i %>
+						</td>
+						<td>
+							<a href="/" class="btn btn-link btn-sm">Project <%=i%></a>
+						</td>
+						<td>
+							<button type="button" class="btn btn-sm btn-outline-primary">
+								Update
+							</button> 
+							<button type="button" class="btn btn-outline-danger btn-sm">
+								Delete
+							</button>
+						</td>
+					</tr>
+				<% } %>
+
+
+				</tbody>
+			</table>
+			<form role="form">
+				<div class="form-group">
+					 
+					<label for="exampleInputEmail1">
+						Email address
+					</label>
+					<input type="email" class="form-control" id="exampleInputEmail1">
+				</div>
+				<div class="form-group">
+					 
+					<label for="exampleInputPassword1">
+						Password
+					</label>
+					<input type="password" class="form-control" id="exampleInputPassword1">
+				</div>
+				<div class="form-group">
+					 
+					<label for="exampleInputFile">
+						File input
+					</label>
+					<input type="file" class="form-control-file" id="exampleInputFile">
+					<p class="help-block">
+						Example block-level help text here.
+					</p>
+				</div>
+				<div class="checkbox">
+					 
+					<label>
+						<input type="checkbox"> Check me out
+					</label>
+				</div> 
+				<button type="submit" class="btn btn-primary">
+					Submit
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>
